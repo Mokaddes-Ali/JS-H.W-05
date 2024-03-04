@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Basic</title>
+</head>
+<body>
+<script>
+//================Loop Statement===================
+//-------While Loop-----------------
+var count = 0;
+document.write('Starting my first loop');
+while(count < 10){
+      document.write('Curent count :' + count + '<br>');
+      count++
+}
+document.write('Loop Stopped' + '<br>');
+
+var num = 20;
+document.write('Loop Starting :' + '<br>');
+
+while(num <= 20){
+    document.write('Imside the loop ,number is:' + num);
+    num += 1;
+}
+document.write('Loop Stopped' + '<br>');
+//-----------do wile loop----------
+var count1 = 0;
+document.write('Starting my first loop');
+do{
+      document.write('Curent count :' + count1 + '<br>');
+      count1++
+}while(count1 < 10)
+document.write('Loop Stopped' + '<br>');
+
+var num2 = 20;
+document.write('Loop Starting :' + '<br>');
+do{
+    document.write('Imside the loop ,number is:' + num2);
+    num2 += 1;
+}while(num2 <= 20)
+document.write('Loop Stopped' + '<br>');
+
+//--------For Loop--------------------
+var num1 = 15;
+document.write('Loop start' + '<br>');
+for(num1 = 0; num1 < 15; num1++){
+    document.write('Carent loop here ' + num1);
+    document.write('<br>');
+
+}
+document.write('Loop Stoppimg' + '<br>');
+
+//------For In Loop---------------
+var aProperty;
+document.write('Navigation Object Properties :' + '<br>');
+for(aProperty in navigator){
+    document.write(aProperty);
+    document.write('<br>');
+}
+//---------------Break Statement---------
+var x = 1;
+document.write('Entering the loop :');
+while (x < 20){
+    if (x == 5){
+    break; //breaks out of loop completely
+}
+x = x + 1;
+document.write(x + '<br>');
+}
+document.write('Exiting the loop!')
+
+//---------continue statement---------------
+var y = 1;
+document.write('Entering the loop :');
+while (y < 10){
+    y = y + 1;
+    if (y == 5){
+    continue; //skill rest of the loop body
+}
+document.write(y + '<br>');
+}
+document.write('Existint the loop! ');
+
+//==================Use of labels to control the flow==========
+//-------example1--------------
+document.write('Entereing the loop' + '<br>');
+outerloop: // this is the outer label
+for( var i = 0; i < 5; i++){
+    document.write('Outloop' + '<br>');
+    innerloop:
+    for(var j = 0; j < 5; j++){
+        if(j > 3) break;             //Quit yhe innermost loop
+        if(i == 2) break innerloop;  // do the same thing
+        if(i == 4) break outerloop;  // quit the outer loop
+        document.write('Innerloop: ' + j + '<br>');
+    }
+}
+document.write('Existing the loop' + '<br>');
+
+//-----------example 2----------------
+document.write('Entereing the loop' + '<br>');
+outerloop: // this is the outer label
+for( var i = 0; i < 3; i++){
+    document.write('Outloop' + i + '<br>');
+    for(var j = 0; j < 5; j++){
+        if(j == 3){
+            continue outerloop;
+        }
+        document.write('Innerloop: ' + j + '<br>');
+    }
+}
+document.write('Existing the loop' + '<br>');
+</script>
+</body>
+</html>
